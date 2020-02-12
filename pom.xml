@@ -56,7 +56,7 @@
 
   <properties>
     <surefire.version>2.21.0</surefire.version>
-    <mavenVersion>3.0</mavenVersion>
+    <mavenVersion>3.6.3</mavenVersion>
     <javaVersion>7</javaVersion>
   </properties>
 
