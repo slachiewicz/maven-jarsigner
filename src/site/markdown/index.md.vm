@@ -24,7 +24,7 @@ This component provides some utilities to sign/verify jars/files in your Mojos.
 Dependency declaration
 ----------------------
 
-```unknown
+```xml
     <dependency>
       <groupId>org.apache.maven.shared</groupId>
       <artifactId>maven-jarsigner</artifactId>
@@ -37,7 +37,7 @@ Sign a jar
 
 You must construct a JarSignerSignRequest. See [javadoc](./apidocs/org/apache/maven/shared/jarsigner/JarSignerSignRequest.html) for more available options.
 
-```unknown
+```java
 
     JarSignerSignRequest request = new JarSignerSignRequest();
     request.setArchive( target );
@@ -51,7 +51,7 @@ You must construct a JarSignerSignRequest. See [javadoc](./apidocs/org/apache/ma
 
 Now you can use the component to sign your jar:
 
-```unknown
+```java
 
     JavaToolResult result = jarSigner.execute( jarSignerRequest );
     // control the execution result
@@ -65,7 +65,7 @@ Verify a signed jar
 
 You must construct a JarSignerVerifyRequest. See [javadoc](./apidocs/org/apache/maven/shared/jarsigner/JarSignerVerifyRequest.html) for more available options.
 
-```unknown
+```java
     JarSignerVerifyRequest request = new JarSignerVerifyRequest();
     request.setCerts( true );
     request.setKeystore( "src/test/keystore" );
@@ -76,7 +76,7 @@ You must construct a JarSignerVerifyRequest. See [javadoc](./apidocs/org/apache/
 
 Now you can use the component to verify your signed jar:
 
-```unknown
+```java
     JavaToolResult result = jarSigner.execute( request );
     // control the execution result
     result.getExitCode()
